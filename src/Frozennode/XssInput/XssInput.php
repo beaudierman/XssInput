@@ -18,7 +18,7 @@ class XssInput extends \Illuminate\Support\Facades\Input {
 
 		if ( $cleanse === true || ($cleanse === NULL && $global_cleanse) )
 		{
-			$value = Security::xss_clean(strip_tags($value));
+			$value = Security::xss_clean($value);
 		}
 
 		return $value;
