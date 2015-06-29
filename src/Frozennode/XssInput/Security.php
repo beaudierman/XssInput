@@ -223,6 +223,10 @@ class Security {
 		// This adds a bit of extra precaution in case
 		// something got through the above filters
 		$str = self::do_never_allowed($str);
+
+		// Strip tags just in case
+		$str = strip_tags($str);
+
 		/*
 		 * Images are Handled in a Special Way
 		 * - Essentially, we want to know that after all of the character
